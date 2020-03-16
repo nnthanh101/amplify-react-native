@@ -1,10 +1,20 @@
-# Documents for AWS Developers & SysOps Administrators
+# amplify-react-native
+AWS Amplify React Native
 
-Static Website using [MkDocs](https://www.mkdocs.org/) to build and/or operate the applications on Amazon AWS.
- 
- 
-## 1. Development & Deployment Environment   
+```
+git clone https://github.com/nnthanh101/amplify-react-native
 
-### 1.1. Development Environment on MacOS
+cd amplify-react-native
+npm run theme
 
-### 1.2. Deployment Environment on Amazon Linux 2
+npm start
+```
+
+> http://localhost:8080
+
+* Note:
+
+```
+# git rm --cached
+git submodule add https://github.com/nnthanh101/hugo-theme-learn themes/hugo-theme-learn
+```

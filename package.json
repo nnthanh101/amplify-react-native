@@ -1,0 +1,20 @@
+{
+	"name": "amplify-react-native",
+	"version": "1.0.0",
+	"homepage": "https://github.com/nnthanh101/amplify-react-native#readme",
+	"bugs": {
+		"url": "https://github.com/nnthanh101/amplify-react-native/issues"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nnthanh101/amplify-react-native.git"
+	},
+	"scripts": {
+		"theme": "git submodule init && git submodule update --checkout --recursive",
+		"start": "hugo server -w -v --enableGitInfo --bind=0.0.0.0 --port 8080",
+		"deploy": "aws s3 sync public/ s3://AMPLIFY_S3_BUCKET/ --delete",
+		"deploycontent": "aws s3 sync public/ s3://AMPLIFY_S3_BUCKET/ --delete --cache-control \"max-age=3600, public\" --exclude \"*\" --include \"*.html\" --include \"*.xml\"",
+		"deployothers": "aws s3 sync public/ s3://AMPLIFY_S3_BUCKET/ --delete --cache-control \"max-age=86400, public\" --exclude \"*.html\" --exclude \"*.xml\""
+	}
+}
